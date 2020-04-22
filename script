@@ -1,0 +1,10 @@
+:global simSlot [/system routerboard modem get sim-slot]
+
+:if ($simSlot="down") do={
+            /system routerboard modem set sim-slot=up
+            
+        } 
+:if ($simSlot="up") do={
+             /system routerboard modem set sim-slot=down
+            
+        }
